@@ -23,7 +23,7 @@ git_prompt_info() {
 #
 # prompt
 export PS1='%{$fg_bold[blue]%}$%{$reset_color%} '
-export RPROMPT='${SSH_CONNECTION+"%{$fg_bold[blue]%}"}%{$fg_bold[blue]%}%~%{$reset_color%} -- $(git_prompt_info)'
+export RPROMPT='${SSH_CONNECTION+"%{$fg_bold[blue]%}"}λ{$fg_bold[blue]%}%~%{$reset_color%} -- $(git_prompt_info)'
 
 if [ -n "$DISPLAY" ]; then
      export BROWSER=google-chrome
@@ -88,7 +88,7 @@ SAVEHIST=10000
 HISTFILE=~/.history
 setopt APPEND_HISTORY
 
-export PATH=$HOME/.bin:/usr/local/sbin:/usr/local/bin:/home/gyoshev/.gem/ruby/1.9.1/bin:/usr/local/share/npm/bin:$PATH
+export PATH=$HOME/.bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/lib/node_modules:/usr/local/lib/node_modules:$NODE_PATH
 
 # remap home/end keys that don't work?
@@ -107,10 +107,10 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=79000000
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 
-if which rbenv > /dev/null; then
-    export RBENV_ROOT=/usr/local/var/rbenv
-    eval "$(rbenv init -)";
-fi
+#if which rbenv > /dev/null; then
+#   export RBENV_ROOT=/usr/local/var/rbenv
+#    eval "$(rbenv init -)";
+#fi
