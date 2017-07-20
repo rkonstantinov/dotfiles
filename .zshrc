@@ -22,8 +22,8 @@ git_prompt_info() {
 }
 #
 # prompt
-export PS1='%{$fg_bold[blue]%}$%{$reset_color%} '
-export RPROMPT='${SSH_CONNECTION+"%{$fg_bold[blue]%}"}λ{$fg_bold[blue]%}%~%{$reset_color%} -- $(git_prompt_info)'
+export PS1='%{$fg_bold[blue]%}λ%{$reset_color%} '
+export RPROMPT='${SSH_CONNECTION+"%{$fg_bold[blue]%}"}${$fg_bold[blue]%}%~%{$reset_color%} -- $(git_prompt_info)'
 
 if [ -n "$DISPLAY" ]; then
      export BROWSER=google-chrome
