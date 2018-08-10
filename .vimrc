@@ -27,42 +27,7 @@ call vundle#begin()
      autocmd FileType gitcommit setlocal tw=72 | set spell | set colorcolumn=50
 
      Plugin 'kien/ctrlp.vim'
-
-     """"""""""""""""""""""""""""""""""""""
-     " Syntastic!!
-     " npm i -g jshint eslint babel-eslint eslint-plugin-react
-     Plugin 'scrooloose/syntastic'
-     Plugin 'ruanyl/vim-fixmyjs'
-
-     let g:syntastic_error_symbol = "✗"
-     let g:syntastic_warning_symbol = "⚠"
-
-     let g:syntastic_json_checkers = ["jshint"]
-
-     let g:syntastic_javascript_checkers = ["eslint"]
-     let g:syntastic_javascript_eslint_exec = 'eslint_d'
-
-     nnoremap <Leader>f :Fixmyjs<CR>
-
-     let g:syntastic_typescript_checkers = ["eslint"]
-
-     let g:syntastic_always_populate_loc_list = 1
-     let g:syntastic_auto_loc_list = 1
-     let g:syntastic_check_on_open = 1
-
-     autocmd BufRead,BufEnter,BufNew *.jsx    let b:syntastic_checkers = ["eslint"]
-     autocmd BufRead,BufEnter,BufNew *.ts    let b:syntastic_checkers = ["tslint"]
-     autocmd BufRead,BufEnter .babelrc        let b:syntastic_checkers = ["jshint"]
-     autocmd BufRead,BufEnter *.json          let b:syntastic_checkers = ["jshint"]
-
-     """"""""""""""""""""""""""""""""""""""
-     " TypeScript
-     Plugin 'leafgarland/typescript-vim'
-     Plugin 'Shougo/vimproc.vim'
-     Plugin 'Quramy/tsuquyomi'
-
-     autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
-
+     "
      """"""""""""""""""""""""""""""""""""""
      " NERDTree
 
@@ -80,9 +45,10 @@ set t_Co=256
 set mouse=a
 set ttymouse=xterm2
 
+" theme
 colorscheme nazca
 
-set number
+set number relativenumber
 syntax on
 
 let c_minlines=500
@@ -131,7 +97,7 @@ set foldlevel=100
 set hidden
 
 " GUI Settings
-set guifont=consolas:h11
+"set guifont=monospace:h11
 
 "remove trailin whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -143,4 +109,5 @@ autocmd BufRead,BufNewFile *.cshtml set filetype=html
 autocmd BufRead,BufNewFile *.md     set filetype=markdown
 autocmd BufRead,BufNewFile *.md     set foldlevel=2
 autocmd BufRead,BufNewFile *.json   set filetype=json
+autocmd BufRead,BufNewFile *.ts     set filetype=javascript
 "autocmd BufRead,BufNewFile *.jsx    set filetype=javascript

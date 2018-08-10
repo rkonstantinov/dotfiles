@@ -1,11 +1,11 @@
 [user]
-	name = Rosen Konstantinov
-	email = rosen.konstantinov@telerik.com
+    name = Rosen Konstantinov
+    email = rosen.konstantinov@telerik.com
 [color]
     ui = true
 
 [diff]
-    tool = tortoise
+    tool = melt
 [difftool]
     prompt = false
 [diff]
@@ -36,19 +36,4 @@
   ca = commit --amend
   eu = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   au = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-
-  #############################
-  # public/private mirrors aliases
-  #############################
-
-  pl = "!git fetch --prune && git rebase --preserve-merges `git rev-parse --abbrev-ref --symbolic-full-name @{u}`"
-
-  # Bring alias from public repo to private
-  put-in-master = "!git checkout master && git pl && git cherry-pick core/master && git push && git checkout core-master"
-
-  # use this when cherry picking from private to public
-  drop-deleted-by-us = "!git rm `git status --porcelain | grep ^DU | cut -d' ' -f2`"
-
-  # skip a cherry-pick when in progress
-  skip-cherry = "!git reset; git clean -df; git cherry-pick --continue"
 

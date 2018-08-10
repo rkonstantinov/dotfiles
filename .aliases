@@ -1,0 +1,5 @@
+# exa:
+alias la="exa -abghl --git --color=automatic"
+
+# `cat` with beautiful colors. requires: pip install -U Pygments
+alias c='pygmentize -O style=borland -f console256 -g'

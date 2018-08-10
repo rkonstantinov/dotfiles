@@ -23,7 +23,7 @@ git_prompt_info() {
 #
 # prompt
 export PS1='%{$fg_bold[blue]%}λ%{$reset_color%} '
-export RPROMPT='${SSH_CONNECTION+"%{$fg_bold[blue]%}"}${$fg_bold[blue]%}%~%{$reset_color%} -- $(git_prompt_info)'
+export RPROMPT='${SSH_CONNECTION+"%{$fg_bold[blue]%}"}%{$fg_bold[blue]%}%~%{$reset_color%} -- $(git_prompt_info)'
 
 if [ -n "$DISPLAY" ]; then
      export BROWSER=google-chrome
@@ -106,11 +106,13 @@ export RUBY_HEAP_SLOTS_INCREMENT=300000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=79000000
 
+
 ### Added by the Heroku Toolbelt
 #export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$HOME/.npm-global/bin:$PATH"
-
+#export PATH="$HOME/.npm-global/bin:$PATH"
+#
 #if which rbenv > /dev/null; then
-#   export RBENV_ROOT=/usr/local/var/rbenv
+#    export RBENV_ROOT=/usr/local/var/rbenv
 #    eval "$(rbenv init -)";
 #fi
+source /home/rkonstan@bedford.progress.com/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
