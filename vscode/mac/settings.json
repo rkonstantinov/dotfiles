@@ -1,0 +1,57 @@
+{
+    "workbench.iconTheme": "vs-seti",
+    "window.zoomLevel": 0.8,
+    "editor.fontSize": 13,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "elm-format.formatOnSave": false,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Popping and Locking",
+    "cSpell.enabledLanguageIds": [
+        "c",
+        "cpp",
+        "csharp",
+        "elm",
+        "go",
+        "haskell",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "markdown",
+        "php",
+        "plaintext",
+        "python",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ],
+    "cSpell.language": "en",
+    "cSpell.userWords": [
+        "foldr"
+    ],
+    "workbench.editor.enablePreview": false,
+    "editor.cursorStyle": "underline",
+    "terminal.integrated.fontSize": 13,
+    "editor.lineNumbers": "relative",
+    "editor.snippetSuggestions": "top",
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "[elm]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[css]": {
+        "editor.formatOnSave": true
+    },
+    "explorer.openEditors.visible": 0,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.acceptSuggestionOnCommitCharacter": false
+}
