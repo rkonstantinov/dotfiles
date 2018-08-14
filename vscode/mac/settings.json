@@ -1,13 +1,35 @@
 {
-    "workbench.iconTheme": "vs-seti",
-    "window.zoomLevel": 0.8,
-    "editor.fontSize": 13,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.cursorStyle": "underline",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "elm-format.formatOnSave": false,
-    "terminal.integrated.shell.osx": "/bin/zsh",
+    "editor.fontSize": 13,
+    "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
+    "editor.snippetSuggestions": "top",
+    "elm-format.formatOnSave": false,
+    "explorer.openEditors.visible": 0,
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "window.zoomLevel": 0.8,
     "workbench.colorTheme": "Popping and Locking",
+    "workbench.editor.enablePreview": false,
+    "workbench.iconTheme": "vs-seti",
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "[elm]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[css]": {
+        "editor.formatOnSave": true
+    },
     "cSpell.enabledLanguageIds": [
         "c",
         "cpp",
@@ -31,27 +53,5 @@
     "cSpell.language": "en",
     "cSpell.userWords": [
         "foldr"
-    ],
-    "workbench.editor.enablePreview": false,
-    "editor.cursorStyle": "underline",
-    "terminal.integrated.fontSize": 13,
-    "editor.lineNumbers": "relative",
-    "editor.snippetSuggestions": "top",
-    "workbench.startupEditor": "none",
-    "workbench.tips.enabled": false,
-    "[elm]": {
-        "editor.formatOnSave": true
-    },
-    "[typescript]": {
-        "editor.formatOnSave": true
-    },
-    "[javascript]": {
-        "editor.formatOnSave": true
-    },
-    "[css]": {
-        "editor.formatOnSave": true
-    },
-    "explorer.openEditors.visible": 0,
-    "editor.acceptSuggestionOnEnter": "smart",
-    "editor.acceptSuggestionOnCommitCharacter": false
+    ]
 }
