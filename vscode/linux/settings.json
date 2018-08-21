@@ -1,15 +1,17 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+    "cSpell.userWords": [
+        "Injectable",
+        "pageable",
+        "treeview"
+    ],
     "editor.cursorStyle": "underline",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
-    "editor.hover.sticky": false,
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "editor.snippetSuggestions": "top",
-    "npm.enableScriptExplorer": true,
-    "terminal.integrated.experimentalTextureCachingStrategy": "dynamic",
     "terminal.integrated.shell.linux": "/bin/zsh",
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 0.4,
@@ -19,10 +21,14 @@
     "workbench.iconTheme": "vs-nomo-dark",
     "workbench.startupEditor": "none",
     "workbench.tips.enabled": false,
+    "npm.enableScriptExplorer": true,
     "[elm]": {
         "editor.formatOnSave": true
     },
     "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
         "editor.formatOnSave": true
     },
     "files.exclude": {
@@ -33,9 +39,15 @@
         "**/.DS_Store": true,
         "dist/**": true
     },
-    "cSpell.userWords": [
-        "Injectable",
-        "pageable",
-        "treeview"
-    ]
+    "editor.hover.sticky": false,
+    "terminal.integrated.experimentalTextureCachingStrategy": "dynamic",
+    "workbench.panel.defaultLocation": "right",
+    "window.restoreFullscreen": true,
+    "vim.statusBarColorControl": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "vim.useSystemClipboard": true
 }
