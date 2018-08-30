@@ -9,6 +9,9 @@ call vundle#begin()
      Plugin 'gmarik/vundle'
      Plugin 'flazz/vim-colorschemes'
 
+     Plugin 'vim-airline/vim-airline'
+     Plugin 'vim-airline/vim-airline-themes'
+
      " markup
      Plugin 'tpope/vim-ragtag'
 
@@ -27,8 +30,7 @@ call vundle#begin()
      autocmd FileType gitcommit setlocal tw=72 | set spell | set colorcolumn=50
 
      Plugin 'kien/ctrlp.vim'
-     "
-     """"""""""""""""""""""""""""""""""""""
+
      " NERDTree
 
      Plugin 'scrooloose/nerdtree'
@@ -46,7 +48,7 @@ set mouse=a
 set ttymouse=xterm2
 
 " theme
-colorscheme nazca
+colorscheme molokai
 
 set number relativenumber
 syntax on
@@ -96,8 +98,10 @@ set foldmethod=marker
 set foldlevel=100
 set hidden
 
+"
 " GUI Settings
 "set guifont=monospace:h11
+
 
 "remove trailin whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -110,4 +114,4 @@ autocmd BufRead,BufNewFile *.md     set filetype=markdown
 autocmd BufRead,BufNewFile *.md     set foldlevel=2
 autocmd BufRead,BufNewFile *.json   set filetype=json
 autocmd BufRead,BufNewFile *.ts     set filetype=javascript
-"autocmd BufRead,BufNewFile *.jsx    set filetype=javascript
+autocmd BufRead,BufNewFile *.jsx    set filetype=javascript
