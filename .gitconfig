@@ -1,6 +1,6 @@
 [user]
     name = Rosen Konstantinov
-    email = rosen.konstantinov@telerik.com
+    email = rosen.konstantinov@tick42.com
 [color]
     ui = true
 
@@ -21,19 +21,20 @@
 [push]
     default = tracking
 [alias]
-  c = commit -m
-  co = checkout
-  a = add
-  d = diff
-  dic = diff --cached
-  pl = pull --rebase
-  ps = push
-  st = status
-  out = log origin..HEAD
-  qpl = log --pretty=\"%Cblue%h%Creset %Cgreen[%cr]%Creset %s\" origin/production..origin/master
-  l = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue%an%Creset' --abbrev-commit --date=relative
-  ci = commit
-  ca = commit --amend
-  eu = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
-  au = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-
+    c = commit -m
+    co = checkout
+    a = add
+    d = diff
+    dic = diff --cached
+    pl = pull --rebase
+    ps = push
+    st = status
+    out = log origin..HEAD
+    qpl = log --pretty=\"%Cblue%h%Creset %Cgreen[%cr]%Creset %s\" origin/develop..origin/master
+    l = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue%an%Creset' --abbrev-commit --date=relative
+    ci = commit
+    ca = commit --amend
+    eu = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+    au = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+    branchName = rev-parse --abbrev-ref HEAD
+    ff = "!branch=$(git branchName); git pull origin `$branch`"
