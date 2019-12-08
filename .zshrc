@@ -64,14 +64,18 @@ export ZSH="/Users/rkonstantinov/.oh-my-zsh"
 plugins=(
     git
     git-extras
-    colored-man
     pip
     python
+    postgres
     osx
     brew
     npm
     cabal
     history
+    mix
+    extract
+    docker
+    kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,18 +121,13 @@ export CLICOLOR=1
 # expand functions in the prompt
 setopt prompt_subst
 
-# prompt
-#export PS1='%{$fg_bold[blue]%}(~)%{$reset_color%} '
-#export RPROMPT='${SSH_CONNECTION+"%{$fg_bold[green]%}"}%{$fg_bold[white]%}%~%{$reset_color%} --'
-
 git_prompt_info() {
     ref=$(git symbolic-ref HEAD 2> /dev/null)
     if [[ -n $ref ]]; then
         echo "%{$fg_bold[red]%}${ref#refs/heads/}%{$reset_color%}"
     fi
 }
-#
-# prompt
+
 export PS1='%{$fg_bold[blue]%}λ%{$reset_color%} '
 export RPROMPT='${SSH_CONNECTION+"%{$fg_bold[blue]%}"}%{$fg_bold[blue]%}%~%{$reset_color%} -- $(git_prompt_info)'
 
@@ -177,6 +176,8 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
+export LC_ALL=en_US.UTF-8
+
 # vi mode
 bindkey -v
 
@@ -195,7 +196,7 @@ SAVEHIST=10000
 HISTFILE=~/.history
 setopt APPEND_HISTORY
 
-export PATH=$HOME/.bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
+export PATH=$HOME/.bin:/usr/local/sbin:/usr/local/share/npm/bin:$HOME/.npm/bin:$PATH
 export NODE_PATH=/usr/lib/node_modules:/usr/local/lib/node_modules:$NODE_PATH
 
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
@@ -208,4 +209,8 @@ bindkey "^[[4~" end-of-line
 bindkey "^[[5~" beginning-of-history
 bindkey "^[[6~" end-of-history
 
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
