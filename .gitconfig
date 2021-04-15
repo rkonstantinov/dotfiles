@@ -1,6 +1,13 @@
 [user]
     name = Rosen Konstantinov
-    email = rosen.konstantinov@tick42.com
+    email = rosen.konstantinov@gmail.com
+
+[includeIf "gitdir/i:~/work/tick42/"]
+    path = ~/Work/tick42/.gitconfig
+
+[includeIf "gitdir/i:~/work/tick42/jpm-projects/"]
+     path = ~/work/tick42/jpm-projects/.gitconfig
+
 [color]
     ui = true
 
@@ -36,5 +43,3 @@
     ca = commit --amend
     eu = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
     au = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-    branchName = rev-parse --abbrev-ref HEAD
-    ff = "!branch=$(git branchName); git pull origin `$branch`"

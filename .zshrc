@@ -70,12 +70,16 @@ plugins=(
     osx
     brew
     npm
+    node
+    npx
     cabal
     history
     mix
     extract
     docker
+    docker-compose
     kubectl
+    lein
 )
 
 source $ZSH/oh-my-zsh.sh

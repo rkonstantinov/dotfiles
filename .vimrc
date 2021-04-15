@@ -36,7 +36,7 @@ call plug#begin('~/.vim/plugged')
      Plug 'elzr/vim-json'
      Plug 'joaohkfaria/vim-jest-snippets'
 
-     Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+     Plug 'neoclide/coc.nvim', {'branch': 'release'}
      Plug 'mattn/emmet-vim'
 
      " JavaScript
@@ -298,6 +298,14 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for do codeAction of selected region
+function! s:cocActionsOpenFromSelected(type) abort
+  execute 'CocCommand actions.open ' . a:type
+endfunction
+xmap <silent> <leader>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+nmap <silent> <leader>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
+"
 "COC stuf end
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
@@ -313,8 +321,7 @@ highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
 let g:ale_linters = {
-\   'python': ['flake8', 'pylint'],
-\   'typescript': ['tsserver', 'tslint'],
+\   'typescript': ['tsserver', 'eslint'],
 \   'javascript': ['eslint'],
 \   'vue': ['eslint'],
 \   'elm': ['elm-format']
@@ -322,7 +329,7 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
  \'javascript': ['eslint', 'prettier'],
- \    'typescript': ['prettier', 'tslint'],
+ \    'typescript': ['prettier', 'eslint'],
  \    'vue': ['eslint'],
  \    'scss': ['prettier'],
  \    'html': ['prettier'],
