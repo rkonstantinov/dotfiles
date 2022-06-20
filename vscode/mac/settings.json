@@ -135,9 +135,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "yaml.schemas": {
-    "file:///Users/rkonstantinov/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  },
   "atlascode.jira.jqlList": [
     {
       "id": "58b199a4-c569-4a17-9e09-40173f42dd9a",
