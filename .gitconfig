@@ -1,6 +1,6 @@
 [user]
     name = Rosen Konstantinov
-    email = rosen.konstantinov@gmail.com
+    email = xxxx
 
 [includeIf "gitdir/i:~/work/tick42/"]
     path = ~/Work/tick42/.gitconfig
